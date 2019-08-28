@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+     <style type="text/css">
+            .show {
+                background: yellow;
+                border: 2px solid red;
+            }
+
+            .even {
+                background-color: #ffffff;
+            }
+
+            .odd {
+                background-color: #00cccc;
+            }
+        </style>
+<script src="./jquery.min.js"> </script>
+
+
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+                //var arrNames = $("li.list").get(2);
+            var arrNames = ['Gautam Gambhir', 'Virendra Sehwag', 'Sachin Kalia', 'Ronaldo', 'Messy',
+                'Roger Fedderer', 'Rafael nadal', 'Jeev Milkha Singh'];
+                arrNames = $.grep(arrNames, function (item, index) {
+                    return (item.indexOf("R") == 0);
+    });
+                $("#div1").append('<b>' + arrNames + '</b>').addClass("show");
+
+    });
+
+
+</script>
+</head>
+<body >
+    <div>
+
+        <div id="div1">
+        </div>
+        <div id="div2">
+        </div>
+        <ul>
+            <li class="list">Gautam Gambhir</li>
+            <li class="list">Sachin Kalia</li>
+            <li class="list">Anshu Agarwal</li>
+            <li class="list">Virendra Sehwag</li>
+            <li class="list">Avinash Chaudhary</li>
+            <li class="list">Ruchi </li>
+            <li class="list">Rahul Kanojia</li>
+        </ul>
+       
+       
+       
+    </div>
+</body>
+</html>

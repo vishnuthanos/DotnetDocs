@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+<script src="./jquery.min.js"> </script>
+
+<script>
+    function eachmapFunction() {
+       
+        var intArray = [1, 2, 3, 4, 5];
+
+        $.each(intArray, function (index, element) {
+            if (element == 3)
+                return false;
+
+            document.write(element + ',');
+        });
+
+        document.write('<br/>');
+
+        $.map(intArray, function (element, index) {
+            if (element == 3)
+                return false;
+
+            document.write(element + ',');
+        });
+    };
+    function ArrayFunction() {
+        var objVishnu = {};
+        objVishnu.Name = "Vishnu";
+        objVishnu.Adress = "Hyderabad";
+        objVishnu.Phone = "8500648565";
+        var VishnuArray = [objVishnu, { Name: "Teju", Adress: "Vizag", Phone: "9666147258" },
+            { Name: "pandu", Adress: "pune", Phone: "9666147258" }];
+    }
+    function ForEachMapFIlter() {
+        let arr = ['a', 'b', 'c', 'd'];
+        arr.forEach((letter) => {
+           // console.log(letter);
+        });
+
+        arr.map((letter) => {
+          //  console.log(letter);
+        });
+        arr = [1, 2, 3, 4, 5];
+        let arr2 = arr.map(num => num * 2).filter(num => num > 5);
+        console.log(arr2);
+
+    }
+
+    
+    $(document).ready(function () {
+        ForEachMapFIlter();
+        
+     
+      
+
+       
+       
+
+
+       
+});
+</script>
+</head>
+<body >
+<div>
+</div>
+</body>
+</html>
